@@ -6,4 +6,11 @@
 
 env-local.sh
 
+results.json
+work/
+
+env/
+venv/
+.venv/
+
 __pycache__

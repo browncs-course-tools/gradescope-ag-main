@@ -1,0 +1,11 @@
+{
+    "assignments": [
+	{
+	    "name": "test-proj1",
+	    "id": 4690704,
+	    "target": "do_run.sh",
+	    "command": "proj1"
+	},
+
+    ]
+}
