@@ -62,9 +62,9 @@ add_test()
 
     tmp_file=$(mktemp)
     if $use_status; then
-	jq --arg status "$status_message" --arg output "$output" --arg name "$name" '.tests += [{ "name": $name, "status": $status, "output": $output}]' ${RESULTS_FILE} > ${tmp_file} && cp ${tmp_file} ${RESULTS_FILE}
+	jq --arg status "$status_message" --arg output "$output" --arg name "$name" '.tests += [{ "name": $name, "status": $status, "output": $output}]' ${results_file} > ${tmp_file} && cp ${tmp_file} ${results_file}
     else
-	jq --argjson score "$score" --argjson max_score "$max_score" --arg output "$output" --arg name "$name" '.tests += [{ "name": $name, "score": $score,"max_score": $max_score, "output": $output}]' ${RESULTS_FILE} > ${tmp_file} && cp ${tmp_file} ${RESULTS_FILE}
+	jq --argjson score "$score" --argjson max_score "$max_score" --arg output "$output" --arg name "$name" '.tests += [{ "name": $name, "score": $score,"max_score": $max_score, "output": $output}]' ${results_file} > ${tmp_file} && cp ${tmp_file} ${results_file}
 
     fi
 }
