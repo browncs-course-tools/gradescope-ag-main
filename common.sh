@@ -43,7 +43,7 @@ add_test()
 		shift
 		;;
 	    --max-score)
-		score=$2
+		max_score=$2
 		shift
 		shift
 		;;
