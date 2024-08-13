@@ -48,7 +48,7 @@ add_test()
 		shift
 		;;
 	    --results-file)
-		results=file="$2"
+		results_file="$2"
 		shift
 		shift
 		;;
