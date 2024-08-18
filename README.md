@@ -18,6 +18,9 @@ This repository is organized as follows:
  - `config/`:  Contains per-assignment configuration for this
    autograder.  See the README in this directory for details.
  - `do_run.sh`:  Example script first run by the loader.  This is one
-   option you can extend to run your own autograder code
+   option you can extend to run your own autograder code--take a look
+   at this file for details on how you can use/extend it.
+ - `common.sh`:  Bash helpers for manipulating `results.json`.  You
+   can use this to add extra autograder tests to your results file.
    
 
