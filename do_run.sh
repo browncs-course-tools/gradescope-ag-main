@@ -22,6 +22,7 @@ main()
     submission=""
     command=""
     results_file=""
+    debug=0
 
     POSITIONAL=()
     while [[ $# -gt 0 ]]; do
@@ -42,6 +43,10 @@ main()
 		shift
 		shift
 		;;
+	    --debug)
+		debug=1
+		shift
+		;;
 	    *)
 		POSITIONAL+=("$1")
 		shift
@@ -49,6 +54,9 @@ main()
     done
     set -- "${POSITIONAL[@]}"
 
+    if [[ $debug == 1 ]]; then
+	set -x
+    fi
 
     case $command in
 	proj1)
